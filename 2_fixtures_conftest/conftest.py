@@ -1,6 +1,7 @@
 import pytest
+from src.Account import Account
+
 
 @pytest.fixture
-def first_fixture():
-    print("\nPrint from 'first_fixture' in conftest.py")
-
+def empty_account():
+    return Account("Test", 0)

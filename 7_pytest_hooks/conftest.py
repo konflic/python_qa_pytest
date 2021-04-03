@@ -11,6 +11,7 @@ def pytest_runtest_setup(item):
         item.name = "NAME OF {} IS CHANGED!".format(item.name)
     print('\n', "item = ", item)
 
+
 def pytest_runtest_call(item):
     if "four" in item.name:
         item.name = "NAME OF {} IS CHANGED!".format(item.name)

@@ -24,12 +24,12 @@ import pytest
 #         print(f"\n Finalize from {request.scope} fixture!")
 #     request.addfinalizer(fin)
 #
-# @pytest.fixture(scope="session", autouse=True)
-# def session_fixture(request):
-#     print(f"\n Hello from {request.scope.upper()} fixture!")
-#     def fin():
-#         print(f"\n Finalize from {request.scope.upper()} fixture!")
-#     request.addfinalizer(fin)
+@pytest.fixture(scope="session", autouse=True)
+def session_fixture(request):
+    print(f"\n Hello from {request.scope.upper()} autouse fixture!")
+    def fin():
+        print(f"\n Finalize from {request.scope.upper()} autouse fixture!")
+    request.addfinalizer(fin)
 
 
 def test_one():

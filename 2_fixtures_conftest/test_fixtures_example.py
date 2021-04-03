@@ -1,22 +1,27 @@
 import pytest
+from src.Account import Account
 
 
 # Уровень поиска фикстур в файлах conftest
 # В файле теста > в ближайшем conftest
 
 @pytest.fixture
-def first_fixture():
-    print("\nPrint from 'first_fixture'")
+def activated_account():
+    return Account("Test", 100, True)
 
 
-def test_one(first_fixture):
+def test_one(activated_account):
+    pass
+
+
+def test_two(empty_account):
     pass
 
 
 class TestFunction:
 
-    def test_from_test_class_one(self, first_fixture):
+    def test_from_test_class_one(self, activated_account):
         pass
 
-    def test_from_test_class_two(self, first_fixture):
+    def test_from_test_class_two(self, empty_account):
         pass
