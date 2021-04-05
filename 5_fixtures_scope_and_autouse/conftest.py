@@ -1,37 +1,35 @@
 import pytest
 
+from src.Bank import Bank
+from src.Account import Account
 
-@pytest.fixture()
-def function_fixture(request):
-    print(f"\n Hello from {request.scope} fixture!")
-    def fin():
-        print(f"\n Finalize from {request.scope} fixture!")
-    request.addfinalizer(fin)
+
+@pytest.fixture
+def function_bank(request):
+    bank = Bank("FunctionBank", [])
+    request.addfinalizer(bank.close)
+    return bank
 
 
 @pytest.fixture(scope="class")
-def class_fixture(request):
-    print(f"\n Hello from {request.scope} fixture!")
-    def fin():
-        print(f"\n Finalize from {request.scope} fixture!")
-    request.addfinalizer(fin)
+def class_bank(request):
+    bank = Bank("ClassBank", [])
+    request.addfinalizer(bank.close)
+    return bank
 
 
 @pytest.fixture(scope="module")
-def module_fixture(request):
-    print(f"\n Hello from {request.scope} fixture!")
-    def fin():
-        print(f"\n Finalize from {request.scope} fixture!")
-    request.addfinalizer(fin)
+def module_bank(request):
+    bank = Bank("ModuleBank", [])
+    request.addfinalizer(bank.close)
+    return bank
 
 
 @pytest.fixture(scope="session")
-def session_fixture(request):
-    print(f"\n Hello from {request.scope} fixture!")
-    def fin():
-        print(f"\n Finalize from {request.scope} fixture!")
-    request.addfinalizer(fin)
-
+def session_bank(request):
+    bank = Bank("SessionBank", [])
+    request.addfinalizer(bank.close)
+    return bank
 
 # @pytest.fixture(autouse=True)
 # def always_used_fixture():

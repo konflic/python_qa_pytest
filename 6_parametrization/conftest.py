@@ -1,15 +1,11 @@
 import pytest
+from src.Account import Account
+from src.Bank import Bank
 
 
 @pytest.fixture(params=[11, 12, 13, 14])
 def fixture_with_params(request):
     return request.param
-
-
-import pytest
-
-from src.Account import Account
-from src.Bank import Bank
 
 
 @pytest.fixture

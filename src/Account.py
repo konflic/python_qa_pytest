@@ -8,7 +8,7 @@ class Account:
             balance = 0.0
         self.__balance = balance
         self.__activated = activated
-        print("Account({}) was created!".format(self))
+        print("Account({}) was created!".format(id(self)))
 
     @property
     def balance(self):
