@@ -11,9 +11,9 @@
 
 ## Полезная информация
 
-Документация: https://docs.pytest.org/en/latest/contents.html
+Документация: https://docs.pytest.org/
 
-Репозиторий: https://github.com/pytest-dev/pytest
+Проект на github: https://github.com/pytest-dev/pytest
 
 ```--setup-show``` - показывает весь процесс запуска и работы pytest
 
