@@ -63,9 +63,11 @@ class Account:
     def close(self):
         if self.__balance > 0:
             print("Can't close not empty account!")
+            return False
         else:
             print("Account: {} was closed!".format(self))
             del self
+            return True
 
     def __repr__(self):
-        return "({}) {}:{}$:{}".format(self.__uid, self.owner, self.__balance, self.__activated)
+        return "({}){}:{}$:{}".format(self.__uid, self.owner, self.__balance, self.__activated)

@@ -8,3 +8,7 @@ def test_two():
 
 def test_three():
     pass
+
+
+def test_four():
+    pass

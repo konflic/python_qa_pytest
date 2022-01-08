@@ -11,4 +11,3 @@ def test_default_not_activated():
     a = Account("Mr.X", 0)
     assert not a.activated
     a.close()
-

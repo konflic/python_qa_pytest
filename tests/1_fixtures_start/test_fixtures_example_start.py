@@ -23,7 +23,6 @@ def test_two(activated_account):
 
 
 class TestFunction:
-
     def test_from_test_class_one(self, empty_account):
         pass
 

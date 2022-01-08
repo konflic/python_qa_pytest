@@ -16,7 +16,6 @@ def test_two(function_bank, class_bank, module_bank, session_bank):
 
 
 class TestClass:
-
     def test_one(self, function_bank, class_bank, module_bank, session_bank):
         function_bank.add_account(Account("test", 100))
         class_bank.add_account(Account("test", 100))

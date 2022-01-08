@@ -12,4 +12,6 @@ def test_not_activated_account_cant_transfer(empty_account, activated_account):
     balance_before_transfer = activated_account.balance
     operation_result = empty_account.transfer(activated_account, 100)
     assert operation_result is None
-    assert activated_account.balance == balance_before_transfer, "Баланс не должен измениться"
+    assert (
+            activated_account.balance == balance_before_transfer
+    ), "Баланс не должен измениться"

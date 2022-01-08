@@ -11,7 +11,6 @@ def testwo():
 
 # Создание тестовых классов
 class TestClass:
-
     def test_one(self):
         list_to_test1 = []
         list_to_test2 = []
