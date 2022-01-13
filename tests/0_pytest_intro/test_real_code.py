@@ -9,5 +9,5 @@ def test_account_create():
 
 def test_default_not_activated():
     a = Account("Mr.X", 0)
-    assert not a.activated
+    assert a.balance == 0
     a.close()

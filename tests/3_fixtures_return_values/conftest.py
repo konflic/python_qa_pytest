@@ -9,4 +9,4 @@ def empty_account():
 
 @pytest.fixture
 def activated_account():
-    return Account("Test", 100, True)
+    return Account("Test", 100)

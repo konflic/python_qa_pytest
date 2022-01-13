@@ -9,7 +9,7 @@ def empty_account():
 
 @pytest.fixture
 def activated_account():
-    return Account("Test", 100, True)
+    return Account("Test", 100)
 
 
 def test_one(empty_account):
@@ -23,6 +23,7 @@ def test_two(activated_account):
 
 
 class TestFunction:
+
     def test_from_test_class_one(self, empty_account):
         pass
 

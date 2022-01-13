@@ -18,7 +18,7 @@ def empty_account(request):
 @pytest.fixture
 def activated_account():
     """Способ создания финализатора через yield"""
-    account = Account("Activated", 100, True)
+    account = Account("Activated", 100)
 
     yield account
 

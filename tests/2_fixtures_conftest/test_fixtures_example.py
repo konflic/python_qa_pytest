@@ -8,7 +8,7 @@ from src.Account import Account
 
 @pytest.fixture
 def activated_account():
-    return Account("Test", 100, True)
+    return Account("Test", 100)
 
 
 def test_one(activated_account):
