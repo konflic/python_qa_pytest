@@ -31,7 +31,3 @@ def bank(empty_account, activated_account):
     """Фикстура банка с предустановленными счетами"""
     bank = Bank("TestBank", [empty_account, activated_account])
     return bank
-
-
-def test_example(bank):
-    pass

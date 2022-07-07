@@ -28,20 +28,23 @@ class Account:
         cls.CREATED -= 1
 
     def deposit(self, amount):
-        if (isinstance(amount, int) or isinstance(amount, float)) and amount > 0:
+        if (isinstance(amount, int) and amount >= 0):
             self.__balance += amount
             return True
         return False
 
     def withdraw(self, amount):
-        if (isinstance(amount, int) or isinstance(amount, float)):
-            if amount > 0 and self.__balance > amount:
+        if (isinstance(amount, int)):
+            if amount > 0 and self.__balance >= amount:
                 self.__balance -= amount
                 return amount
         return 0
 
     def transfer(self, other_account, amount):
         return other_account.deposit(self.withdraw(amount))
+
+    def close(self):
+        del self
 
     def __del__(self):
         self.__decrease_accounts_count()
